@@ -113,23 +113,26 @@ namespace AdvancedRenamer
 
         private void butRename_Click(object sender, EventArgs e)
         {
-            DoRename();
+            Rename();
         }
 
-        private void DoRename()
+        /// <summary>
+        /// Функция переименования файлов
+        /// </summary>
+        private void Rename()
         {
-            int successCount = 0;
-            int failCount = 0;
-            foreach (ListViewItem item in fileListView.Items)
+            int successCount = 0; //кол-во успешных переименований
+            int failCount = 0;//кол-во неудачных переименований
+            foreach (ListViewItem item in fileListView.Items)//перебор всех файлов в папке
             {
-                if (item.Tag != null && item.Tag is RenameSuggestion)
+                if (item.Tag != null && item.Tag is RenameSuggestion) // проверка на наличия тегов и шаблона
                 {
                     RenameSuggestion suggestion = (RenameSuggestion)item.Tag;
-                    if (suggestion.ShouldRename)
+                    if (suggestion.ShouldRename) // Если прошла проверка на необходимость переименования происходит процесс переименования
                     {
                         try
                         {
-                            suggestion.TargetFile.MoveTo(suggestion.TargetFile.DirectoryName + "\\" + suggestion.SuggestedName);
+                            suggestion.TargetFile.MoveTo(suggestion.TargetFile.DirectoryName + "\\" + suggestion.SuggestedName); 
                             item.Checked = false;
                             item.SubItems[0].Text = suggestion.TargetFile.Name;
                             item.ForeColor = Color.Green;
@@ -148,9 +151,9 @@ namespace AdvancedRenamer
                     }
                 }
             }
-
-            statusLabel.Text = "Renamed " + successCount + " files (" + failCount + " failed)";
+            statusLabel.Text = "Переименовано " + successCount + " файлов (" + failCount + " ошибок)"; //Вывод ствиуса переименования
         }
+
 
         private void fileListView_ItemCheck(object sender, ItemCheckEventArgs e)
         {
@@ -222,7 +225,7 @@ namespace AdvancedRenamer
 
             try
             {
-                DoRename();
+                Rename();
             }
             catch { }
 
@@ -317,18 +320,18 @@ namespace AdvancedRenamer
 
         private void renameFilesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DoRename();
+            Rename();
         }
 
         private void deleteFilesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int deleteCount = renameSuggestions.Count(s => s.ShouldRename);
+            int DelCount = renameSuggestions.Count(s => s.ShouldRename);
 
-            if (MessageBox.Show("Delete " + deleteCount + " files?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.No)
+            if (MessageBox.Show("Delete " + DelCount + " files?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.No)
                 return;
 
             toolStripProgressBar.Enabled = true;
-            toolStripProgressBar.Maximum = deleteCount;
+            toolStripProgressBar.Maximum = DelCount;
 
             try
             {

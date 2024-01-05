@@ -17,6 +17,11 @@ namespace AdvancedRenamer
             Pattern = pattern;
         }
 
+        public RenamePattern()
+        {
+            Pattern = "";
+        }
+
         /// <summary>
         /// Apply a renaming pattern to the given string
         /// </summary>

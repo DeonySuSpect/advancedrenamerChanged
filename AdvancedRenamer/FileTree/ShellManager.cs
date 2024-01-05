@@ -113,7 +113,6 @@ namespace AdvancedRenamer.FileTree
             SHGFI flags = SHGFI.SmallIcon;
             if (expanded)
                 flags |= SHGFI.OpenIcon;
-
             return GetIcon(path, flags, FILE_ATTRIBUTE_DIRECTORY);
         }
 

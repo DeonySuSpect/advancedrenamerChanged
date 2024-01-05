@@ -1,0 +1,11 @@
+C:\Users\Denis\Documents\GitHub\advancedrenamer\ShellContextMenu.cs\bin\Debug\ShellContextMenu.dll
+C:\Users\Denis\Documents\GitHub\advancedrenamer\ShellContextMenu.cs\bin\Debug\ShellContextMenu.pdb
+C:\Users\Denis\Documents\GitHub\advancedrenamer\ShellContextMenu.cs\bin\Debug\SharpShell.dll
+C:\Users\Denis\Documents\GitHub\advancedrenamer\ShellContextMenu.cs\bin\Debug\SharpShell.pdb
+C:\Users\Denis\Documents\GitHub\advancedrenamer\ShellContextMenu.cs\bin\Debug\SharpShell.xml
+C:\Users\Denis\Documents\GitHub\advancedrenamer\ShellContextMenu.cs\obj\Debug\ShellContextMenu.csprojAssemblyReference.cache
+C:\Users\Denis\Documents\GitHub\advancedrenamer\ShellContextMenu.cs\obj\Debug\ShellContextMenu.Properties.Resources.resources
+C:\Users\Denis\Documents\GitHub\advancedrenamer\ShellContextMenu.cs\obj\Debug\ShellContextMenu.csproj.GenerateResource.cache
+C:\Users\Denis\Documents\GitHub\advancedrenamer\ShellContextMenu.cs\obj\Debug\ShellContextMenu.csproj.CopyComplete
+C:\Users\Denis\Documents\GitHub\advancedrenamer\ShellContextMenu.cs\obj\Debug\ShellContextMenu.dll
+C:\Users\Denis\Documents\GitHub\advancedrenamer\ShellContextMenu.cs\obj\Debug\ShellContextMenu.pdb
